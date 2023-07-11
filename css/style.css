@@ -5,7 +5,7 @@
     --tranparent-color: #CCC;
     --main-transition: 0.3s;
     --main-background-color:white;
-    --ult-background-color:#CCC;
+    --ult-background-color:#ececec;
 }
 /* Start General Rules / Global Rules  */
 *{
@@ -969,7 +969,194 @@ header .container .main-nav > li > .mega-menu li a:hover{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 35px;
+    padding-bottom: 80px;
+}
+.services .container .box{
+    background-color: var(--main-background-color);
+    box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%),
+    0 2px 4px 0 rgb(0 0 0 / 12%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: var(--main-transition);
+}
+.services .container .box:hover{
+    transform: translateY(-15px);
+}
+.services .container .box:hover::before,
+.services .container .box:hover::after{
+    width: 50%;
+    height: 4px;
+}
+
+.services .container .box::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 0;
+    height: 2px;
+    background: var(--main-color);
+    width: 0;
+    transition: var(--main-transition);
+}
+.services .container .box::after{
+    position: absolute;
+    content: "";
+    right: 50%;
+    top: 0;
+    height: 2px;
+    background: var(--main-color);
+    width: 0;
+    transition: var(--main-transition);
+}
+.services .container .box .icon{
+    color: #777;
+    font-size: 80px;
+    padding-top: 30px;
+}
+.services .container .box h1{
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+.services .container .box .box-feet{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #cccccc33;
+    position: relative;
+    overflow: hidden;
+}
+.services .container .box .box-feet span{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    background: var(--main-color);
+    padding: 8px 60px 8px 30px;
+}
+/* .services .container .box .box-feet span::before{
+    position: absolute;
+    content: "";
+} */
+.services .container .box .box-feet span::after{
+    position: absolute;
+    content: "";
+    left: 107px;
+    top: -16px;
+    width: 45px;
+    height: 169%;
+    transform: rotate(23deg);
+    background-color: #ccc;
+}
+.services .container .box .box-feet a{
+    color: var(--main-color-alt);
+    text-transform: capitalize;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    font-size: 18px;
 }
 /* End services */
+/* Start skills */
+.skills{
+    background: var(--main-background-color);
+}
+.skills .container{
+    display: flex;
+    padding-bottom: 80px;
+}
+@media (max-width:768px){
+    .skills .container.levels{
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills .container .image{
+        display: none;
+    }
+}
+@media (max-width:992px){
+    .skills .container.levels{
+        flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills .container .image{
+        display: none;
+    }
+}
+.skills .container .image{
+    flex-basis: 50%;
+   display: grid;
+   place-content: center;
+}
+.skills .container .levels{
+    flex-basis: 50%;
+    padding: 15px;
+    width: 100%;
+}
+.skills .container .levels h2{
+    font-weight: 700;
+    padding: 20px 0;
+}
+.skills .container .levels span{
+    width: 100%;
+    background-color: #0088cc;
+    height: 3vh;
+    position: relative;
+    display: block;
+}
+.skills .container .levels span:first-of-type:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    bottom: 0;
+    background: var(--tranparent-color);
+}
+.skills .container .levels span:nth-of-type(2):after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    bottom: 0;
+    background: var(--tranparent-color);
+}
+.skills .container .levels span:nth-of-type(3):after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    bottom: 0;
+    background: var(--tranparent-color);
+}
+.skills .container .levels span:last-of-type:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    bottom: 0;
+    background: var(--tranparent-color);
+    transition: var(--main-transition);
+}
+.skills .container .levels .percent{
+    color: var(--main-color);
+    border: 1px solid var(--tranparent-color);
+    width: fit-content;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    top: -40px;
+}
 
-  
+/* Start skills */
