@@ -775,7 +775,7 @@ header .container .main-nav > li > .mega-menu li a:hover{
     font-weight: 700;
     text-transform: capitalize;
     overflow: hidden;
-    z-index: -2;
+    z-index: 1;
 }
 .features .container .feat:first-of-type .btn::before{
     content: "";
