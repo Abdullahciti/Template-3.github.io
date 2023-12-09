@@ -24,11 +24,48 @@ body{
 html{
     scroll-behavior: smooth;
 }
+/* Java Script */
+.loader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 545231;
+    height: 8px;
+    background: var(--main-color-alt);
+    /* width: 15px; */
+}
+.go-up{
+    opacity: 0;
+    position: fixed;
+    z-index: 1154;
+    bottom: 50px;
+    right: 40px;
+    background-color: var(--main-color-alt);
+    color: #f6f5f5;
+    font-size: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    transition: opacity linear 0.25s;
+}
+.go-up:hover{
+    background-color: var(--main-color);
+}
+.go-up:hover::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: difference;
+    background: #191919;
+}
 .spikes {
     position: relative;
-  }
-  
-  .spikes::after {
+}
+
+.spikes::after {
     content: '';
     position: absolute;
     right: 0;
@@ -201,7 +238,7 @@ ul{
         right: 0;
         border-radius: 0;
         height: 100%;
-        width: 50%;
+        width: 51%;
         z-index:-1;
     }
 }
@@ -210,9 +247,9 @@ ul{
         transform: translateX(6px);
     }
 }
-
 /* End Animitions  */
-/* End General Rules / Global Rules  */
+/* End General Rules & Global Rules  */
+
 /* Start Header */
 header{
     background: var(--main-background-color);
@@ -775,7 +812,7 @@ header .container .main-nav > li > .mega-menu li a:hover{
     font-weight: 700;
     text-transform: capitalize;
     overflow: hidden;
-    z-index: 1;
+    z-index: -2;
 }
 .features .container .feat:first-of-type .btn::before{
     content: "";
