@@ -34,8 +34,8 @@ function startFind (el){
 }
 
 window.onscroll = function websiteLoader(){
-    let scrollPercentage = (scrollY / maxHeight);
-    loader.style.width = `${scrollPercentage * 100}%`;
+    let scrollTop = document.documentElement.scrollTop;
+    loader.style.width = `${(scrollTop / height) * 100}%`;
     if(window.scrollY >= 550){
         goUpBtn.style.display = "block"
         if(window.scrollY >= 551){
