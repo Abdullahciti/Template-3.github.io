@@ -52,7 +52,7 @@ window.onscroll = function websiteLoader(){
         goUpBtn.style.opacity = "0"
     }
     if (window.scrollY >= (skills.offsetTop - 150)) {
-            let skGoal = skillSpan.dataset.skills;
+            let skGoal = +skillSpan.dataset.skills + 20;
             skillsSpans.forEach((e)=> {
             e.style.width = `${skGoal}%`;
         })
