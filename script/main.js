@@ -20,7 +20,6 @@ let skillsSpans = document.querySelectorAll(".skills .my-percent");
 
 // Settings 
 let started = false;
-let startedAgain = false;
 
 function startFind (el){
     let goal = el.dataset.goal;
