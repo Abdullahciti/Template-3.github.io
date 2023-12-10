@@ -22,6 +22,7 @@ let skillsSpans = document.querySelectorAll(".skills .my-percent");
 // Settings 
 let started = false;
 let startedAgain = false;
+let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
 function startFind (el){
     let goal = el.dataset.goal;
