@@ -2,8 +2,7 @@
 let loader = document.querySelector(".loader");
 let goUpBtn = document.querySelector(".go-up")
 
-let maxHeight = document.documentElement.scrollHeight  - document.documentElement.clientHeight;
-
+let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
 // Stats
 let stats = document.querySelector (".stats");
@@ -22,7 +21,6 @@ let skillsSpans = document.querySelectorAll(".skills .my-percent");
 // Settings 
 let started = false;
 let startedAgain = false;
-let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
 function startFind (el){
     let goal = el.dataset.goal;
@@ -34,7 +32,7 @@ function startFind (el){
     }, 1500 / goal);
 }
 
-window.onscroll = function websiteLoader(){
+window.onscroll = () => {
     let scrollTop = document.documentElement.scrollTop;
     loader.style.width = `${(scrollTop / height) * 100}%`;
     if(window.scrollY >= 550){
