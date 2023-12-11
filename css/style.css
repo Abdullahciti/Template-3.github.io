@@ -302,7 +302,6 @@ header .container .main-nav {
     justify-content: center;
     align-items: center;
 }
-
 header .container .main-nav > li > a{
     display: flex;
     align-items: center;
@@ -324,19 +323,21 @@ header .container .main-nav > li > a{
         /* padding: 0 20px; */
     }
 }
-header .container .main-nav > li > a:hover{
+header .container .main-nav > li > a:hover,
+header .container .main-nav li a.active{
     color: var(--main-color);
 }
 header .container .main-nav > li > a::before{
-    position: absolute;
-    content: "";
-    top: 0;
-    width: 100%;
-    background: var(--main-color-alt);
-    height: 3px;
-    left: -100%;
-    transition: var(--main-transition);
+position: absolute;
+content: "";
+top: 0;
+width: 100%;
+background: var(--main-color-alt);
+height: 3px;
+left: -100%;
+transition: var(--main-transition);
 }
+header .container .main-nav li a.active::before,
 header .container .main-nav > li > a:hover::before{
     left: 0;
 }
@@ -410,7 +411,8 @@ header .container .main-nav > li > .mega-menu li a{
         width: auto;
     }
 }
-header .container .main-nav > li > .mega-menu li a:hover{
+header .container .main-nav > li > .mega-menu li a:hover,
+header .container .main-nav li > .mega-menu a.active{
     text-decoration: underline;
     text-underline-position: under;
     text-decoration-color: var(--main-color-alt);
@@ -1198,7 +1200,7 @@ header .container .main-nav > li > .mega-menu li a:hover{
     padding: 20px 0;
 }
 .skills .container .levels span{
-    width: 1%;
+    width: 0%;
     background-color: #0088cc;
     height: 3vh;
     position: relative;
@@ -1241,14 +1243,15 @@ header .container .main-nav > li > .mega-menu li a:hover{
     background: var(--tranparent-color);
     transition: var(--main-transition);
 }
-.skills .container .levels .percent{
+.skills .container .levels .percent {
     color: var(--main-color);
     border: 1px solid var(--tranparent-color);
     width: fit-content;
-    padding: 2px;
+    padding: 10px;
     position: absolute;
-    right: 0;
-    top: -40px;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 /* End skills */
 /* <!-- Start how it works --> */
