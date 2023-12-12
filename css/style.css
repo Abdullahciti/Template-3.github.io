@@ -1975,6 +1975,10 @@ footer .container .box:last-of-type .image{
     height: fit-content;
     flex-basis: 30%;
 }
+footer .container .box:last-of-type .image:hover{
+    background:var(--main-color);
+    cursor: pointer;
+}
 footer .container .box:last-of-type .image img{
     max-width: 100%;
 }
