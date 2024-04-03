@@ -1199,59 +1199,31 @@ header .container .main-nav li > .mega-menu a.active{
     font-weight: 700;
     padding: 20px 0;
 }
-.skills .container .levels span{
-    width: 0%;
-    background-color: #0088cc;
-    height: 3vh;
+.skills .container .levels .skill-bar{
+    width: 100%;
+    height: 20px;
     position: relative;
-    display: block;
+    display: flex;
+    gap: 10px;
 }
-.skills .container .levels span:first-of-type:after{
-    content: "";
-    position: absolute;
-    right: 0%;
-    width: 20%;
-    height: 100%;
-    bottom: 0;
-    background: var(--tranparent-color);
+.skills .container .levels .skill-bar .skill-lvl {
+    width: 100%;
+    background-color: var(--ult-background-color);
 }
-.skills .container .levels span:nth-of-type(2):after {
-    content: "";
+.skills .skill-bar .my-percent {
     position: absolute;
-    right: 0;
-    width: 15%;
+    background-color: var(--main-color);
     height: 100%;
-    bottom: 0;
-    background: var(--tranparent-color);
-}
-.skills .container .levels span:nth-of-type(3):after{
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 30%;
-    height: 100%;
-    bottom: 0;
-    background: var(--tranparent-color);
-}
-.skills .container .levels span:last-of-type:after{
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 20%;
-    height: 100%;
-    bottom: 0;
-    background: var(--tranparent-color);
-    transition: var(--main-transition);
+    left: 0;
+    top: 0;
 }
 .skills .container .levels .percent {
     color: var(--main-color);
     border: 1px solid var(--tranparent-color);
-    width: fit-content;
     padding: 10px;
-    position: absolute;
-    right: -60px;
-    top: 50%;
-    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* End skills */
 /* <!-- Start how it works --> */
@@ -1920,6 +1892,7 @@ footer .container .box:first-of-type p{
 footer .container .box:nth-child(2){
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
 }
 @media (max-width:768px) {
     footer .container .box:nth-child(2){
@@ -1952,17 +1925,23 @@ footer .container .box:nth-child(3) {
     flex-direction: column;
     gap: 30px;
     color: white;
+    padding-top: 30px;
 }
 footer .container .box:nth-child(3) .row{
     display: flex;
-    gap: 15px;
-    justify-content: space-between;
+    gap: 8px;
 }
 footer .container .box:nth-child(3) .row i{
     color: var(--main-color);
     font-size: 30px;
 }
+footer .container .box:nth-child(3) .row p {
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+}
 footer .container .box:last-of-type{
+    padding-top: 30px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -1974,10 +1953,6 @@ footer .container .box:last-of-type .image{
     background: white;
     height: fit-content;
     flex-basis: 30%;
-}
-footer .container .box:last-of-type .image:hover{
-    background:var(--main-color);
-    cursor: pointer;
 }
 footer .container .box:last-of-type .image img{
     max-width: 100%;
